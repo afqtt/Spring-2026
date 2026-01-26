@@ -2,24 +2,74 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Andrew's First Page</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <h1>Hello World!</h1>
-        <h2>My name is Andrew</h2>
-        <p>This is my first webpage</p>
-        <img src="images/art.jpeg" alt="Wall art" />
-        <script src="" async defer></script>
-    </body>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Andrew's First Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            width: 800px;
+            background-color: red;
+            height: 600px;
+            margin: 0 auto;
+        }
+
+        p {
+            color: white;
+        }
+
+        .floatright {
+            float: left;
+            width: 250px;
+            background-color: aquamarine;
+        }
+
+        footer {
+            clear: both;
+        }
+
+        main {
+            margin-left: 20px;
+            background-color: blue;
+            padding-left: 20px
+        }
+    </style>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Hello</h1>
+            <h2>My Name is Andrew, this is my first landing page,<i>please be kind</i><b>DONT MAKE FUN OF ME</b></h2>
+            <h3>This is a tiny heading</h3>
+        </header>
+        <p title="I'm a tooltip">if you put your mouse over this paragraph, it'll display the title attribute as a
+            tooltip.</p>
+        <nav class="floatRight">
+            <p>This is my navigator space</p>
+        </nav>
+        <main class="floatRight"><img src="images/best ai sasuke jacket.png" style="width: 300px;"
+                alt="Jacket inspired by Sasuke"> <img src="images/crazy purple giorno john.png" style="width: 300px;"
+                alt="Jacket inspired by JJBA"><img src="images/jojos cheeta and leopard fur jacket.webp"
+                style="width: 300px;" alt="Fur Jacket Inspired by JJBA"></main>
+        <footer>
+            <p>Copyright Andrew Cram 2026</p>
+        </footer>
+
+
+
+    </div>
+
+</body>
+
 </html>
