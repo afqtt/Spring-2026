@@ -1,0 +1,39 @@
+ h1{color: aqua;}
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 800px;
+            background-color: red;
+            margin: 0 auto;
+        }
+
+        p {
+            color: white;
+        }
+
+        .floatleft {
+            float: left;
+            width: 48%;
+            background-color: aquamarine;
+        }
+        .right{ 
+        float:right; 
+        width:48%; 
+        background-color: blueviolet;}
+
+        footer {
+            text-align: center;
+            clear:both;
+            background-color: darkgrey;
+            width: 100%;
+            padding-top: 20px;
+        }
+
+        main {
+            margin-left: 20px;
+            background-color: blue;
+            padding-left: 20px
+        }
+        img{width:100px;}
