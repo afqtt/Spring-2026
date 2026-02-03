@@ -32,8 +32,33 @@
         }
 
         main {
-            margin-left: 20px;
             background-color: blue;
-            padding-left: 20px
+            
         }
         img{width:100px;}
+
+       
+
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.monsieur-la-doulaise-italic {
+  font-family: "Monsieur La Doulaise", cursive;
+  font-weight: 400;
+  font-style: italic;
+  color: violet;
+  font-size: small;
+}
+
+a:hover {
+    color: orange;
+}
+a{text-decoration: none;
+    color: yellow;}
+
+    a:visited {
+        color: pink;
+    }
