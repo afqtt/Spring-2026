@@ -25,13 +25,40 @@
         <header>
             </article><h1>Hello</h1></article>
            <article class="right monsieur-la-doulaise-italic"> <h2>My Name is <a>Andrew</a>, this is my first landing page,<i>please be kind</i><b>DONT MAKE FUN OF ME</b></h2></article>
-            <h3>This is a tiny heading</h3>
+            <h2>HTML Forms</h2>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+           <h3>This is a tiny heading</h3>
         </header>
         <p class="quintessential-regular" title="I'm a tooltip">if you put your mouse over this paragraph, it'll display the title attribute as a
             tooltip.</p>
         <nav class="floatleft">
             <p>This is my navigator space</p>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+// Create gradient
+var grd = ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10,10,150,80);
+</script>
         </nav>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JJByzDNLpf4?si=bz0GX9bEYbOGT0cz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       
         <main><img src="images/best ai sasuke jacket.png" style="width: 100px;"
                 alt="Jacket inspired by Sasuke"> <img src="images/crazy purple giorno john.png" style="width: 100px;"
                 alt="Jacket inspired by JJBA"><img src="images/jojos cheeta and leopard fur jacket.webp"
