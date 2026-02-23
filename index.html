@@ -1,76 +1,146 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Andrew's First Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Quintessential&display=swap" rel="stylesheet">
-
-
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Quintessential&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
+
         <header>
-            </article><h1>Hello</h1></article>
-           <article class="right monsieur-la-doulaise-italic"> <h2>My Name is <a>Andrew</a>, this is my first landing page,<i>please be kind</i><b>DONT MAKE FUN OF ME</b></h2></article>
-            <h2>HTML Forms</h2>
+            <h1>Hello 👋</h1>
 
-<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br><br>
-  <input type="submit" value="Submit">
-</form> 
+            <article class="right monsieur-la-doulaise-italic">
+                <h2>My Name is <a href="#">Andrew</a>, this is my first landing page 😅
+                    <i>Please be kind</i>
+                    <b>DON'T MAKE FUN OF ME</b>
+                </h2>
+            </article>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
-           <h3>This is a tiny heading</h3>
+            <h2>HTML Forms 📝</h2>
+
+            <form action="/action_page.php">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="Andrew"><br>
+
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Cram"><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <h3>This is a tiny heading ✨</h3>
         </header>
-        <p class="quintessential-regular" title="I'm a tooltip">if you put your mouse over this paragraph, it'll display the title attribute as a
-            tooltip.</p>
+
+        <p class="quintessential-regular" title="I'm a tooltip">
+            Hover over this paragraph to see a tooltip 🎯
+        </p>
+
+        <!-- ===== TABLE ===== -->
+        <section>
+            <h2>My Favorite Anime Jackets 🔥</h2>
+
+            <table>
+                <caption>Anime Jacket Collection</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Character</th>
+                        <th scope="col">Anime</th>
+                        <th scope="col">Style</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sasuke</td>
+                        <td>Naruto</td>
+                        <td>Dark Streetwear</td>
+                    </tr>
+                    <tr>
+                        <td>Giorno</td>
+                        <td>JoJo's Bizarre Adventure</td>
+                        <td>Royal Purple</td>
+                    </tr>
+                    <tr>
+                        <td>Itachi</td>
+                        <td>Naruto</td>
+                        <td>Akatsuki Cloak</td>
+                    </tr>
+                    <tr>
+                        <td>Gojo</td>
+                        <td>Jujutsu Kaisen</td>
+                        <td>Modern Minimal</td>
+                    </tr>
+                    <tr>
+                        <td>Leopard Coat</td>
+                        <td>JoJo's Bizarre Adventure</td>
+                        <td>Luxury Fur</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ===== LISTS ===== -->
+        <section>
+            <h2>Things I Like 💻🎨</h2>
+
+            <h3>Unordered List</h3>
+            <ul class="styled-ul">
+                <li>Web Design</li>
+                <li>Anime Fashion</li>
+                <li>Digital Art</li>
+                <li>Gaming</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol class="styled-ol">
+                <li>Design the idea</li>
+                <li>Write the HTML</li>
+                <li>Style with CSS</li>
+                <li>Add JavaScript</li>
+            </ol>
+        </section>
+
+        <!-- ===== SIMPLE JAVASCRIPT ===== -->
+        <section>
+            <h2>Click the Button ⚡</h2>
+            <p id="demoText">Press the button to see something cool.</p>
+            <button onclick="changeText()">Click Me 🚀</button>
+        </section>
+
+        <script>
+            function changeText() {
+                document.getElementById("demoText").textContent =
+                    "🔥 JavaScript is working! Great job! You clicked a button!!!";
+            }
+        </script>
+
         <nav class="floatleft">
             <p>This is my navigator space</p>
-            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML canvas tag.</canvas>
-
-<script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-// Create gradient
-var grd = ctx.createLinearGradient(0,0,200,0);
-grd.addColorStop(0,"red");
-grd.addColorStop(1,"white");
-// Fill with gradient
-ctx.fillStyle = grd;
-ctx.fillRect(10,10,150,80);
-</script>
         </nav>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JJByzDNLpf4?si=bz0GX9bEYbOGT0cz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       
-        <main><img src="images/best ai sasuke jacket.png" style="width: 100px;"
-                alt="Jacket inspired by Sasuke"> <img src="images/crazy purple giorno john.png" style="width: 100px;"
-                alt="Jacket inspired by JJBA"><img src="images/jojos cheeta and leopard fur jacket.webp"
-                style="width: 100px;" alt="Fur Jacket Inspired by JJBA"></main>
+
+        <main>
+            <img src="images/best ai sasuke jacket.png" alt="Jacket inspired by Sasuke">
+            <img src="images/crazy purple giorno john.png" alt="Jacket inspired by JJBA">
+            <img src="images/jojos cheeta and leopard fur jacket.webp" alt="Fur Jacket Inspired by JJBA">
+        </main>
+
         <footer>
-            <p>Copyright Andrew Cram 2026</p>
+            <p>Copyright Andrew Cram 2026 ©</p>
         </footer>
 
-
-
     </div>
-
 </body>
 
 </html>
