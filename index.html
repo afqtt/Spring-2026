@@ -7,7 +7,6 @@
     <title>Andrew's First Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 
     <!-- Google Fonts -->
@@ -17,130 +16,108 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
 
-        <header>
-            <h1>Hello 👋</h1>
+    <!-- NAVBAR (CSS Navbar Demo Requirement) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-            <article class="right monsieur-la-doulaise-italic">
-                <h2>My Name is <a href="#">Andrew</a>, this is my first landing page 😅
-                    <i>Please be kind</i>
-                    <b>DON'T MAKE FUN OF ME</b>
-                </h2>
-            </article>
+    <header>
+        <h1>Hello 👋</h1>
 
-            <h2>HTML Forms 📝</h2>
+        <article class="right monsieur-la-doulaise-italic">
+            <h2>My Name is <a href="#">Andrew</a>, this is my first landing page 😅
+                <i>Please be kind</i>
+                <b>DON'T MAKE FUN OF ME</b>
+            </h2>
+        </article>
 
-            <form action="/action_page.php">
-                <label for="fname">First name:</label><br>
-                <input type="text" id="fname" name="fname" value="Andrew"><br>
+        <!-- ===== FORM (RUBRIC REQUIREMENT) ===== -->
+        <h2>Anime Style Survey 📝</h2>
 
-                <label for="lname">Last name:</label><br>
-                <input type="text" id="lname" name="lname" value="Cram"><br><br>
+        <form action="/action_page.php" class="styled-form">
 
-                <input type="submit" value="Submit">
-            </form>
+            <!-- Text Input -->
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname">
 
-            <h3>This is a tiny heading ✨</h3>
-        </header>
+            <!-- Radio Buttons -->
+            <p>Favorite Anime:</p>
+            <input type="radio" name="anime" value="Naruto"> Naruto
+            <input type="radio" name="anime" value="JoJo"> JoJo
+            <input type="radio" name="anime" value="JJK"> Jujutsu Kaisen
 
-        <p class="quintessential-regular" title="I'm a tooltip">
-            Hover over this paragraph to see a tooltip 🎯
-        </p>
+            <!-- Checkboxes -->
+            <p>What do you like?</p>
+            <input type="checkbox" name="interest" value="Design"> Web Design
+            <input type="checkbox" name="interest" value="Fashion"> Fashion
+            <input type="checkbox" name="interest" value="Gaming"> Gaming
 
-        <!-- ===== TABLE ===== -->
-        <section>
-            <h2>My Favorite Anime Jackets 🔥</h2>
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Survey">
+        </form>
 
-            <table>
-                <caption>Anime Jacket Collection</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Character</th>
-                        <th scope="col">Anime</th>
-                        <th scope="col">Style</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Sasuke</td>
-                        <td>Naruto</td>
-                        <td>Dark Streetwear</td>
-                    </tr>
-                    <tr>
-                        <td>Giorno</td>
-                        <td>JoJo's Bizarre Adventure</td>
-                        <td>Royal Purple</td>
-                    </tr>
-                    <tr>
-                        <td>Itachi</td>
-                        <td>Naruto</td>
-                        <td>Akatsuki Cloak</td>
-                    </tr>
-                    <tr>
-                        <td>Gojo</td>
-                        <td>Jujutsu Kaisen</td>
-                        <td>Modern Minimal</td>
-                    </tr>
-                    <tr>
-                        <td>Leopard Coat</td>
-                        <td>JoJo's Bizarre Adventure</td>
-                        <td>Luxury Fur</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+        <h3>This is a tiny heading ✨</h3>
+    </header>
 
-        <!-- ===== LISTS ===== -->
-        <section>
-            <h2>Things I Like 💻🎨</h2>
+    <!-- GRAPHICS: IMAGE MAP -->
+    <section>
+        <h2>Clickable Jacket (Image Map) 🎯</h2>
+        <img src="images/best ai sasuke jacket.png" alt="Sasuke Jacket"
+             usemap="#jacketmap" width="300">
 
-            <h3>Unordered List</h3>
-            <ul class="styled-ul">
-                <li>Web Design</li>
-                <li>Anime Fashion</li>
-                <li>Digital Art</li>
-                <li>Gaming</li>
-            </ul>
+        <map name="jacketmap">
+            <area shape="rect" coords="0,0,150,150" href="#" alt="Top Part">
+            <area shape="rect" coords="150,150,300,300" href="#" alt="Bottom Part">
+        </map>
+    </section>
 
-            <h3>Ordered List</h3>
-            <ol class="styled-ol">
-                <li>Design the idea</li>
-                <li>Write the HTML</li>
-                <li>Style with CSS</li>
-                <li>Add JavaScript</li>
-            </ol>
-        </section>
+    <!-- MEDIA SECTION -->
+    <section>
+        <h2>Audio Media 🎵</h2>
+        <audio controls>
+            <source src="horse.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </section>
 
-        <!-- ===== SIMPLE JAVASCRIPT ===== -->
-        <section>
-            <h2>Click the Button ⚡</h2>
-            <p id="demoText">Press the button to see something cool.</p>
-            <button onclick="changeText()">Click Me 🚀</button>
-        </section>
+    <!-- CANVAS SHAPE -->
+    <section>
+        <h2>Canvas Shape 🎨</h2>
+        <canvas id="myCanvas" width="300" height="150"></canvas>
+    </section>
 
-        <script>
-            function changeText() {
-                document.getElementById("demoText").textContent =
-                    "🔥 JavaScript is working! Great job! You clicked a button!!!";
-            }
-        </script>
+    <!-- EXISTING CONTENT -->
+    <main>
+        <img src="images/crazy purple giorno john.png" alt="Giorno Jacket">
+        <img src="images/jojos cheeta and leopard fur jacket.webp" alt="Fur Jacket">
+    </main>
 
-        <nav class="floatleft">
-            <p>This is my navigator space</p>
-        </nav>
+    <footer>
+        <p>Copyright Andrew Cram 2026 ©</p>
+    </footer>
 
-        <main>
-            <img src="images/best ai sasuke jacket.png" alt="Jacket inspired by Sasuke">
-            <img src="images/crazy purple giorno john.png" alt="Jacket inspired by JJBA">
-            <img src="images/jojos cheeta and leopard fur jacket.webp" alt="Fur Jacket Inspired by JJBA">
-        </main>
+</div>
 
-        <footer>
-            <p>Copyright Andrew Cram 2026 ©</p>
-        </footer>
+<!-- CANVAS SCRIPT -->
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
 
-    </div>
+    ctx.fillStyle = "purple";
+    ctx.fillRect(20, 20, 150, 100);
+
+    ctx.beginPath();
+    ctx.arc(220, 75, 40, 0, 2 * Math.PI);
+    ctx.strokeStyle = "aqua";
+    ctx.stroke();
+</script>
+
 </body>
-
 </html>
