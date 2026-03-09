@@ -2,122 +2,209 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Andrew's First Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="style.css">
+<title>Andrew's Flexbox Page</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Quintessential&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+
+<!-- jQuery + jQuery UI -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
+
 <div class="container">
 
-    <!-- NAVBAR (CSS Navbar Demo Requirement) -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Media</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+<!-- NAVBAR -->
 
-    <header>
-        <h1>Hello 👋</h1>
+<nav class="navbar">
 
-        <article class="right monsieur-la-doulaise-italic">
-            <h2>My Name is <a href="#">Andrew</a>, this is my first landing page 😅
-                <i>Please be kind</i>
-                <b>DON'T MAKE FUN OF ME</b>
-            </h2>
-        </article>
+<h2 class="logo">13TH GALLERY</h2>
 
-        <!-- ===== FORM (RUBRIC REQUIREMENT) ===== -->
-        <h2>Anime Style Survey 📝</h2>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Gallery</a></li>
+<li><a href="#">Media</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
 
-        <form action="/action_page.php" class="styled-form">
+</nav>
 
-            <!-- Text Input -->
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname">
+<!-- HERO SECTION -->
 
-            <!-- Radio Buttons -->
-            <p>Favorite Anime:</p>
-            <input type="radio" name="anime" value="Naruto"> Naruto
-            <input type="radio" name="anime" value="JoJo"> JoJo
-            <input type="radio" name="anime" value="JJK"> Jujutsu Kaisen
+<header class="hero">
 
-            <!-- Checkboxes -->
-            <p>What do you like?</p>
-            <input type="checkbox" name="interest" value="Design"> Web Design
-            <input type="checkbox" name="interest" value="Fashion"> Fashion
-            <input type="checkbox" name="interest" value="Gaming"> Gaming
+<h1>Hello 👋</h1>
 
-            <!-- Submit Button -->
-            <input type="submit" value="Submit Survey">
-        </form>
+<p>My name is Andrew. This is my first flexbox webpage.</p>
 
-        <h3>This is a tiny heading ✨</h3>
-    </header>
+</header>
 
-    <!-- GRAPHICS: IMAGE MAP -->
-    <section>
-        <h2>Clickable Jacket (Image Map) 🎯</h2>
-        <img src="images/best ai sasuke jacket.png" alt="Sasuke Jacket"
-             usemap="#jacketmap" width="300">
+<!-- FLEXBOX ROW SECTION -->
 
-        <map name="jacketmap">
-            <area shape="rect" coords="0,0,150,150" href="#" alt="Top Part">
-            <area shape="rect" coords="150,150,300,300" href="#" alt="Bottom Part">
-        </map>
-    </section>
+<section class="flex-row">
 
-    <!-- MEDIA SECTION -->
-    <section>
-        <h2>Audio Media 🎵</h2>
-        <audio controls>
-            <source src="horse.mp3" type="audio/mpeg">
-            Your browser does not support audio.
-        </audio>
-    </section>
+<div class="flex-column">
 
-    <!-- CANVAS SHAPE -->
-    <section>
-        <h2>Canvas Shape 🎨</h2>
-        <canvas id="myCanvas" width="300" height="150"></canvas>
-    </section>
+<h2>Clickable Jacket</h2>
 
-    <!-- EXISTING CONTENT -->
-    <main>
-        <img src="images/crazy purple giorno john.png" alt="Giorno Jacket">
-        <img src="images/jojos cheeta and leopard fur jacket.webp" alt="Fur Jacket">
-    </main>
+<img src="images/best ai sasuke jacket.png"
+alt="Sasuke Jacket"
+usemap="#jacketmap"
+width="300">
 
-    <footer>
-        <p>Copyright Andrew Cram 2026 ©</p>
-    </footer>
+<map name="jacketmap">
+<area shape="rect" coords="0,0,150,150" href="#">
+<area shape="rect" coords="150,150,300,300" href="#">
+</map>
+
+</div>
+
+<div class="flex-column">
+
+<h2>Audio Media</h2>
+
+<audio controls>
+<source src="horse.mp3" type="audio/mpeg">
+Your browser does not support audio
+</audio>
+
+<h2>Canvas Shape</h2>
+
+<canvas id="myCanvas" width="300" height="150"></canvas>
+
+</div>
+
+</section>
+
+<!-- PRODUCT GRID (FLEXBOX ROWS + COLUMNS) -->
+
+<section>
+
+<h2 class="section-title">Gallery</h2>
+
+<main>
+
+<div class="product">
+<img src="images/crazy purple giorno john.png" alt="Jacket">
+<p>Purple Giorno Jacket</p>
+</div>
+
+<div class="product">
+<img src="images/jojos cheeta and leopard fur jacket.webp" alt="Jacket">
+<p>Leopard Fur Jacket</p>
+</div>
+
+<div class="product">
+<img src="images/crazy purple giorno john.png" alt="Jacket">
+<p>Luxury Anime Jacket</p>
+</div>
+
+</main>
+
+</section>
+
+<!-- FORM -->
+
+<section>
+
+<h2>Anime Style Survey</h2>
+
+<form class="styled-form">
+
+<label>First Name</label>
+<input type="text" name="fname">
+
+<p>Favorite Anime:</p>
+
+<label><input type="radio" name="anime"> Naruto</label>
+<label><input type="radio" name="anime"> JoJo</label>
+<label><input type="radio" name="anime"> Jujutsu Kaisen</label>
+
+<p>What do you like?</p>
+
+<label><input type="checkbox"> Web Design</label>
+<label><input type="checkbox"> Fashion</label>
+<label><input type="checkbox"> Gaming</label>
+
+<input type="submit" value="Submit Survey">
+
+</form>
+
+</section>
+
+<!-- JQUERY UI ACCORDION -->
+
+<section>
+
+<h2>Anime Info</h2>
+
+<div id="accordion">
+
+<h3>Naruto</h3>
+<div>
+<p>Naruto follows a ninja who dreams of becoming the Hokage.</p>
+</div>
+
+<h3>JoJo</h3>
+<div>
+<p>JoJo's Bizarre Adventure follows the Joestar family through generations.</p>
+</div>
+
+<h3>Jujutsu Kaisen</h3>
+<div>
+<p>A story about sorcerers battling powerful cursed spirits.</p>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>Copyright Andrew Cram 2026 ©</p>
+
+</footer>
 
 </div>
 
 <!-- CANVAS SCRIPT -->
+
 <script>
-    var c = document.getElementById("myCanvas");
-    var ctx = c.getContext("2d");
 
-    ctx.fillStyle = "purple";
-    ctx.fillRect(20, 20, 150, 100);
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
-    ctx.beginPath();
-    ctx.arc(220, 75, 40, 0, 2 * Math.PI);
-    ctx.strokeStyle = "aqua";
-    ctx.stroke();
+ctx.fillStyle = "purple";
+ctx.fillRect(20,20,150,100);
+
+ctx.beginPath();
+ctx.arc(220,75,40,0,2*Math.PI);
+ctx.strokeStyle="aqua";
+ctx.stroke();
+
+</script>
+
+<!-- JQUERY UI -->
+
+<script>
+
+$(function(){
+$("#accordion").accordion();
+});
+
 </script>
 
 </body>
+
 </html>

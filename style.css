@@ -1,64 +1,139 @@
- h1{color: aqua;}
-        * {
-            box-sizing: border-box;
-        }
-
-        .container {
-            width: 800px;
-            background-color: red;
-            margin: 0 auto;
-        }
-
-        p {
-            color: white;
-        }
-
-        .floatleft {
-            float: left;
-            width: 48%;
-            background-color: aquamarine;
-        }
-        .right{ 
-        float:right; 
-        width:48%; 
-        background-color: blueviolet;}
-
-        footer {
-            text-align: center;
-            clear:both;
-            background-color: darkgrey;
-            width: 100%;
-            padding-top: 20px;
-        }
-
-        main {
-            background-color: blue;
-            
-        }
-        img{width:100px;}
-
-       
-
-
-.quintessential-regular {
-  font-family: "Quintessential", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.monsieur-la-doulaise-italic {
-  font-family: "Monsieur La Doulaise", cursive;
-  font-weight: 400;
-  font-style: italic;
-  color: violet;
-  font-size: small;
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f4f4;
 }
 
-a:hover {
-    color: orange;
+.container{
+max-width:1200px;
+margin:auto;
 }
-a{text-decoration: none;
-    color: yellow;}
 
-    a:visited {
-        color: pink;
-    }
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:black;
+}
+
+.navbar ul{
+display:flex;
+gap:30px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+font-size:18px;
+}
+
+.navbar a:hover{
+color:violet;
+}
+
+.logo{
+color:white;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+/* FLEX ROW */
+
+.flex-row{
+display:flex;
+gap:40px;
+justify-content:center;
+flex-wrap:wrap;
+margin:40px 0;
+}
+
+/* FLEX COLUMN */
+
+.flex-column{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:20px;
+}
+
+/* PRODUCT GRID */
+
+.section-title{
+text-align:center;
+margin-top:40px;
+}
+
+main{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin:40px 0;
+}
+
+.product{
+text-align:center;
+}
+
+.product img{
+width:300px;
+border-radius:6px;
+}
+
+/* FORM */
+
+.styled-form{
+background:#111;
+color:white;
+padding:20px;
+border-radius:8px;
+max-width:400px;
+margin:auto;
+}
+
+.styled-form input[type=text]{
+width:100%;
+padding:8px;
+margin-bottom:10px;
+}
+
+.styled-form input[type=submit]{
+margin-top:10px;
+padding:10px 15px;
+background:black;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+/* CANVAS */
+
+canvas{
+background:#222;
+border:2px solid black;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
