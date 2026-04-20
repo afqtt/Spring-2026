@@ -1,202 +1,157 @@
-body{
+/* RESET */
+
+*{
 margin:0;
-font-family:'Montserrat', sans-serif;
-background:black;
-color:white;
+padding:0;
+box-sizing:border-box;
 }
 
-/* CONTAINER */
-.container{
-max-width:1200px;
-margin:auto;
+body{
+font-family:'Montserrat',sans-serif;
+background:#000;
+color:#fff;
 }
 
-/* NAVBAR */
-.navbar{
+/* NAV */
+
+.nav{
+position:fixed;
+top:0;
+width:100%;
 display:flex;
 justify-content:space-between;
-align-items:center;
-padding:20px;
-border-bottom:1px solid #222;
+padding:20px 40px;
+z-index:100;
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
 }
 
-.navbar ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
-
-.navbar a{
+.nav a{
 color:white;
 text-decoration:none;
-font-size:14px;
-letter-spacing:1px;
-}
-
-.navbar a:hover{
-color:gray;
-}
-
-.logo{
-font-weight:600;
+margin:0 15px;
+font-size:12px;
+letter-spacing:2px;
 }
 
 /* HERO */
+
 .hero{
+height:100vh;
+background:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.hero-overlay{
 text-align:center;
-padding:120px 20px;
-background:url('images/best ai sasuke jacket.png') center/cover;
 }
 
 .hero h1{
-font-size:60px;
-letter-spacing:5px;
+font-size:72px;
+letter-spacing:6px;
 }
 
-.cta{
+.hero p{
+margin-top:10px;
+font-size:14px;
+}
+
+.btn{
+display:inline-block;
 margin-top:20px;
-padding:12px 25px;
-border:none;
-background:white;
-color:black;
-cursor:pointer;
-font-weight:bold;
+padding:12px 30px;
+border:1px solid white;
+color:white;
+text-decoration:none;
 }
 
-.cta:hover{
-background:gray;
+/* SECTIONS */
+
+.section{
+padding:100px 40px;
+text-align:center;
 }
 
-/* FLEX */
-.flex-row{
+.section-title{
+letter-spacing:4px;
+margin-bottom:40px;
+}
+
+/* GRID */
+
+.grid{
 display:flex;
 gap:40px;
 justify-content:center;
 flex-wrap:wrap;
-margin:60px 0;
 }
 
-.flex-column{
-text-align:center;
+.card{
+text-decoration:none;
+color:white;
+width:300px;
 }
 
-/* PRODUCTS */
-.section-title{
-text-align:center;
-margin:60px 0 20px;
-letter-spacing:3px;
-}
-
-main{
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.product{
-background:#111;
-padding:15px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.product:hover{
-transform:scale(1.05);
-}
-
-.product img{
-width:250px;
-}
-
-/* API */
-.api{
-text-align:center;
-margin:50px 0;
-}
-
-.api iframe{
-border:none;
+.img{background:url('best ai sasuke .jacket.png') center/cover;
 width:100%;
-height:80px;
+height:400px;
+background:#222;
 }
 
-/* FORM */
-.styled-form{
-max-width:400px;
-margin:auto;
-background:#111;
-padding:20px;
-border-radius:10px;
-}
-
-.styled-form input[type=text]{
-width:100%;
-padding:10px;
-margin-bottom:10px;
-border:none;
-}
-
-.styled-form input[type=submit]{
-width:100%;
-padding:12px;
-background:white;
-color:black;
-border:none;
-cursor:pointer;
-}
-
-.styled-form input[type=submit]:hover{
-background:gray;
-}
-
-/* CANVAS */
-canvas{
-background:#111;
+.card p{
 margin-top:10px;
 }
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-border-top:1px solid #222;
-margin-top:40px;
+/* EDITORIAL */
+
+.editorial{
+display:flex;
+height:80vh;
 }
 
-/* ===================== */
-/* RESPONSIVE DESIGN */
-/* ===================== */
+.editorial-img{
+flex:1;
+background:#222;
+}
 
-@media (max-width:600px){
-
-.navbar{
+.editorial-text{
+flex:1;
+display:flex;
 flex-direction:column;
+justify-content:center;
+padding:40px;
 }
 
-.navbar ul{
-flex-direction:column;
-gap:10px;
-}
-
-.hero h1{
-font-size:30px;
-}
-
-.product img{
-width:90%;
-}
-
-}
-
-@media (min-width:601px) and (max-width:900px){
-
-.hero h1{
+.editorial h2{
 font-size:40px;
 }
 
-.product img{
-width:200px;
+/* FOOTER */
+
+.footer{
+padding:40px;
+text-align:center;
+border-top:1px solid #222;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.nav{
+flex-direction:column;
+text-align:center;
+}
+
+.editorial{
+flex-direction:column;
+height:auto;
+}
+
+.hero h1{
+font-size:40px;
 }
 
 }
